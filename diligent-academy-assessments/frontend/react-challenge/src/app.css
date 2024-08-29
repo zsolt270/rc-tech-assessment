@@ -1,0 +1,49 @@
+body {
+	margin: auto;
+	width: 40%;
+}
+
+ol {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+	flex-basis: 30%;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+.available {
+	color: green;
+}
+.unAvailable {
+	color: red;
+}
+
+.loading,
+.errorMsg {
+	text-align: center;
+}
+
+.loading::after {
+	content: "";
+	animation: dots 2s infinite;
+}
+
+@keyframes dots {
+	0%,
+	20% {
+		content: ".";
+	}
+	40% {
+		content: "..";
+	}
+	60% {
+		content: "...";
+	}
+}
